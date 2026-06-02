@@ -102,7 +102,7 @@ body::after {
    =========================== */
 #loading {
   position: fixed; inset: 0; z-index: 10000;
-  background: var(--em-shadow);
+  background: var(--em-mid);
   display: flex; flex-direction: column;
   align-items: center; justify-content: center;
   transition: opacity 1.2s ease, transform 1.4s ease;
@@ -145,7 +145,7 @@ body::after {
    =========================== */
 #cover {
   position: fixed; inset: 0; z-index: 5000;
-  background: var(--em-deep);
+  background: var(--em-mid);
   display: flex; flex-direction: column;
   align-items: center; justify-content: center;
   transition: opacity 1.3s ease, transform 1.5s cubic-bezier(.22,1,.36,1);
@@ -438,7 +438,7 @@ section {
 #hero {
   min-height: 100vh;
   display: flex; align-items: center; justify-content: center;
-  background: radial-gradient(ellipse 100% 80% at 50% 0%, #1B4D3E 0%, var(--em-deep) 65%);
+  background: radial-gradient(ellipse 100% 80% at 50% 0%, #1B4D3E 0%, var(--em-mid) 65%);
 }
 .hero-ambient {
   position: absolute; inset: 0;
@@ -576,7 +576,7 @@ section {
    =========================== */
 #quote {
   min-height: 70vh;
-  background: var(--em-dark);
+  background: var(--ivory);
   display: flex; align-items: center; justify-content: center;
 }
 .quote-inner {
@@ -585,26 +585,26 @@ section {
 }
 .ayat-arabic {
   font-size: clamp(28px,5vw,50px);
-  color: var(--gold);
+  color: var(--em-mid);
   line-height: 2; direction: rtl;
   margin-bottom: 2.2rem;
 }
 .ayat-latin {
   font-family: var(--serif); font-style: italic;
   font-size: clamp(14px,1.7vw,18px);
-  color: var(--gold-pale); opacity: .9;
+  color: var(--em-mid); opacity: .9;
   line-height: 1.9; margin-bottom: 1rem;
 }
 .ayat-ref {
   font-family: var(--display);
   font-size: clamp(8px,.85vw,10px);
-  letter-spacing: .4em; color: rgba(199,161,74,.72);
+  letter-spacing: .4em; color: var(--em-dark);
   text-transform: uppercase;
 }
 .opening-text {
   font-family: var(--serif); font-style: italic;
   font-size: clamp(14px,1.7vw,17px);
-  color: rgba(244,233,208,.82);
+  color: var(--em-mid);
   line-height: 2; max-width: 680px;
   margin: 0 auto; text-align: center;
 }
@@ -613,7 +613,7 @@ section {
    COUPLE
    =========================== */
 #couple {
-  background: var(--em-deep);
+  background: var(--em-mid);
   padding: var(--section-pad);
 }
 .couple-grid {
@@ -683,7 +683,7 @@ section {
    COUNTDOWN
    =========================== */
 #countdown {
-  background: var(--em-dark);
+  background: var(--ivory);
   min-height: auto;
 }
 .cd-glass {
@@ -707,14 +707,14 @@ section {
 .cd-num {
   font-family: var(--display);
   font-size: clamp(40px,7vw,76px);
-  color: var(--gold); display: block;
+  color: var(--em-dark); display: block;
   text-shadow: 0 0 40px rgba(199,161,74,.45);
   transition: all .35s;
 }
 .cd-lbl {
   font-family: var(--display);
   font-size: clamp(7px,.75vw,9px);
-  letter-spacing: .4em; color: rgba(199,161,74,.68);
+  letter-spacing: .4em; color: var(--em-mid);
   text-transform: uppercase; display: block; margin-top: .4rem;
   font-weight: bold;
 }
@@ -734,7 +734,7 @@ section {
    EVENTS
    =========================== */
 #events {
-  background: var(--em-deep);
+  background: var(--em-mid);
 }
 .events-grid {
   display: grid; grid-template-columns: 1fr 1fr;
@@ -746,6 +746,12 @@ section {
   padding: 3rem 2.5rem;
   position: relative; overflow: hidden;
   transition: all .6s ease;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;    
+  justify-content: center;
+  text-align: center; */
+
 }
 .ev-card::after {
   content: ''; position: absolute;
@@ -842,7 +848,7 @@ section {
    DRESS CODE
    =========================== */
 #dresscode {
-  background: var(--em-dark);
+  background: var(--ivory);
   min-height: auto;
   padding: 5rem 2rem;
 }
@@ -861,7 +867,7 @@ section {
 }
 .dc-dot {
   width: 52px; height: 52px; border-radius: 50%;
-  border: 1px solid rgba(199,161,74,.35);
+  border: 1px solid; color:var(--gold-soft);
   box-shadow: 0 0 24px rgba(0,0,0,.3);
   transition: transform .4s, box-shadow .4s;
 }
@@ -875,7 +881,7 @@ section {
 .dc-swatch-name {
   font-family: var(--display);
   font-size: clamp(8px,.85vw,9px);
-  letter-spacing: .4em; color: var(--gold-pale);
+  letter-spacing: .4em; color: var(--em-mid);
   opacity: .85; text-transform: uppercase;
 }
 
@@ -883,7 +889,7 @@ section {
    TURUT MENGUNDANG
    =========================== */
 #inviting {
-  background: var(--em-deep);
+  background: var(--em-mid);
   min-height: auto;
 }
 .inv-grid {
@@ -919,7 +925,7 @@ section {
    RSVP
    =========================== */
 #rsvp {
-  background: var(--em-dark);
+  background: var(--ivory);
 }
 .rsvp-glass {
   background: rgba(255,255,255,.025);
@@ -947,14 +953,14 @@ section {
   width: 100%;
   background: rgba(255,255,255,.04);
   border: 1px solid rgba(199,161,74,.25);
-  color: var(--champagne);
+  color: var(--em-mid);
   font-family: var(--serif); font-style: italic;
   font-size: clamp(13px,1.4vw,15px);
   padding: 1rem 1.2rem;
   outline: none; transition: all .4s;
   appearance: none;
 }
-.f-input::placeholder, .f-textarea::placeholder { color: rgba(244,233,208,.38); }
+.f-input::placeholder, .f-textarea::placeholder { color:var(--em-mid) }
 .f-input:focus, .f-textarea:focus {
   border-color: rgba(199,161,74,.55);
   background: rgba(199,161,74,.04);
@@ -967,7 +973,7 @@ section {
   display: flex; align-items: center; justify-content: center; gap: .6rem;
   font-family: var(--serif); font-style: italic;
   font-size: clamp(13px,1.4vw,15px);
-  color: rgba(244,233,208,.78);
+  color:var(--em-mid) ;
   border: 1px solid rgba(199,161,74,.22);
   padding: 1rem; cursor: pointer; transition: all .4s;
 }
@@ -1022,18 +1028,18 @@ section {
   content: '"'; position: absolute;
   top: .4rem; left: 1rem;
   font-family: var(--serif); font-size: 4rem;
-  color: var(--gold); opacity: .14; line-height: 1;
+  color: var(--em-mid); opacity: .14; line-height: 1;
 }
 .w-name {
   font-family: var(--display);
   font-size: 8px; letter-spacing: .3em;
-  color: var(--gold); text-transform: uppercase;
+  color: var(--em-dark); text-transform: uppercase;
   margin-bottom: .5rem;
 }
 .w-text {
   font-family: var(--serif); font-style: italic;
   font-size: clamp(13px,1.4vw,15px);
-  color: rgba(244,233,208,.82); line-height: 1.8;
+  color: rgba(103, 101, 97, 0.82); line-height: 1.8;
 }
 .w-badge {
   display: inline-block; margin-top: .5rem;
@@ -1041,14 +1047,14 @@ section {
   letter-spacing: .2em; text-transform: uppercase;
   padding: .2rem .7rem;
   border: 1px solid rgba(199,161,74,.38);
-  color: var(--gold);
+  color: var(--em-dark);
 }
 
 /* ===========================
    CLOSING
    =========================== */
 #closing {
-  background: var(--em-deep);
+  background: var(--em-mid);
   display: flex; flex-direction: column;
   align-items: center; justify-content: center;
   text-align: center;
@@ -1149,7 +1155,7 @@ section {
   <div class="cover-names-wrap">
     <div class="cover-names">Hajrah <span class="amp">&amp;</span> Saad</div>
   </div>
-  <div class="cover-tagline">20 · Juni · 2026 — Bulukumba</div>
+  <div class="cover-tagline">20 · Juni · 2026</div>
   <div class="cover-divider"></div>
   <div class="cover-to-label">Kepada Yth. Bapak/Ibu/Saudara/i</div>
   <div class="cover-guest-name" id="guestName">Tamu Undangan</div>
@@ -1168,7 +1174,8 @@ section {
   <div class="hero-content" id="hero-content">
     <div class="hero-bismillah rv">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
     <div class="hero-save rv d1">Save The Date</div>
-    <div class="hero-names rv d2" data-text="Hajrah &amp; Saad">Hajrah <span class="hero-amp">&amp;</span> Saad</div>
+    <div class="hero-names rv d2">Hajrah <span class="hero-amp">&amp;</span> Saad</div>
+    <!-- <div class="hero-names rv d2" data-text="Hajrah &amp; Saad">Hajrah <span class="hero-amp">&amp;</span> Saad</div> -->
     <div class="hero-date-bar rv d3">
       <div class="hero-date-unit">
         <span class="hero-date-num">Sabtu</span>
@@ -1207,8 +1214,7 @@ section {
       <div class="orn-row rv d5"><span class="orn-sym">✦</span></div>
       <div class="opening-text rv d6">
         Bismillahirrahmanirrahim.<br>
-        Assalamu'alaikum Warahmatullahi Wabarakatuh<br><br>
-        Maha suci Allah yang menciptakan makhluk-Nya berpasang-pasangan.<br>
+        Assalamu'alaikum Warahmatullahi Wabarakatuh<br>
         Dengan memohon Ridho dan Rahmat Allah <em>Subhanahu Wa Ta'ala</em>, kami mengundang Bapak/Ibu/Saudara/i untuk hadir pada pernikahan kami.
       </div>
     </div>
@@ -1231,7 +1237,7 @@ section {
             onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22><rect fill=%22%231B4D3E%22 width=%22200%22 height=%22200%22/><text y=%22115%22 x=%2268%22 fill=%22%23C7A14A%22 font-size=%2248%22>H</text></svg>'">
         </div>
         <div class="c-name">Nurhajrah Lutfiah</div>
-        <div class="c-degree">S.K.G.</div>
+        <div class="c-degree">S.KG.</div>
         <div class="orn-row" style="margin:1rem 0"><span class="orn-sym" style="font-size:.55rem">✦</span></div>
         <div class="c-parents">
           <span class="p-label">Putri kedua dari</span>
@@ -1268,8 +1274,8 @@ section {
     <div class="s-title rv d1">Menuju Hari Bahagia</div>
     <div class="s-rule rv d2"></div>
     <div class="cd-glass rv d3">
-      <div class="s-eyebrow" style="margin-bottom:.4rem">Akad &amp; Resepsi Pernikahan</div>
-      <div style="font-family:var(--display);font-size:clamp(11px,1.2vw,13px);letter-spacing:.3em;color:var(--gold-pale);opacity:.88;margin-bottom:0">Sabtu, 20 Juni 2026</div>
+      <div class="s-eyebrow" style="margin-bottom:.4rem; color: var(--em-dark)">Akad &amp; Resepsi Pernikahan</div>
+      <div style="font-family:var(--display);font-size:clamp(11px,1.2vw,13px);letter-spacing:.3em;color:var(--em-mid);opacity:.88;margin-bottom:0">Sabtu, 20 Juni 2026</div>
       <div class="cd-grid" id="cdGrid">
         <div class="cd-unit" style="text-align:center">
           <span class="cd-num" id="cd-d">00</span>
@@ -1308,13 +1314,13 @@ section {
     <div class="s-title rv d1">Anda Kami Undang</div>
     <div class="s-rule rv d2"></div>
     <div class="events-grid">
-      <div class="ev-card rv-l d2">
-        <div class="ev-type">Akad Nikah & Resepsi</div>
-        <div class="ev-name">Ijab Qabul & Walimatul 'Ursy</div>
+        <div class="ev-card rv-l d2">
+        <div class="ev-type">Akad Nikah</div>
+        <div class="ev-name">Ijab Qobul</div>
         <span class="ev-date">20.06.26</span>
         <div class="ev-meta">
           <strong>Sabtu, 20 Juni 2026</strong>
-          Pukul 10.00 WITA — Selesai
+          Pukul 10.00 WITA — SELESAI
           <br><br>
           <strong>Lokasi</strong>
           Gedung Bersama RMB Bulukumba<br>
@@ -1323,31 +1329,30 @@ section {
           Sulawesi Selatan
         </div>
         <a class="btn-maps" href="https://share.google/Tnp9zoySVxnTBQk7r" target="_blank">Petunjuk Lokasi →</a>
-      </div>
-    </div>
-          <div class="ev-card rv-r d3">
+       </div>
+        <div class="ev-card rv-r d3">
         <div class="ev-type">Resepsi</div>
-        <div class="ev-name">Mapparola</div>
-        <span class="ev-date">28.06.26</span>
+        <div class="ev-name">Walimahtul 'Ursy</div>
+        <span class="ev-date">20.06.26</span>
         <div class="ev-meta">
-          <strong>Jum'at, 28 Juni 2026</strong>
-          Pukul 11.00 – 16.00 WITA
+          <strong>Sabtu, 20 Juni 2026</strong>
+          Pukul 11.00 WITA — 16.00 WITA
           <br><br>
           <strong>Lokasi</strong>
-          Gedung Mulya Samata<br>
-          Jl. Abd. Kadir Dg. Suro No.144, Samata<br>
-          Kec. Somba Opu  Kab. Gowa<br>
+          Gedung Bersama RMB Bulukumba<br>
+          Jalan S. Majidi, Kel. Loka<br>
+          Kec. Ujung Bulu, Kab. Bulukumba<br>
           Sulawesi Selatan
         </div>
-        <a class="btn-maps" href="https://maps.app.goo.gl/b5jAcdEjFYy8NmU87" target="_blank">Petunjuk Lokasi →</a>
+        <a class="btn-maps" href="https://share.google/Tnp9zoySVxnTBQk7r" target="_blank">Petunjuk Lokasi →</a>
+       </div>
       </div>
-    <div class="orn-row rv" style="margin-top:4rem"><span class="orn-sym">✦</span></div>
-    <div class="rv d1 text-center" style="margin-top:1.2rem">
-      <p class="ayat-latin" style="font-size:clamp(13px,1.6vw,16px);max-width:520px;margin:0 auto">
-        "Semoga Allah memberkahimu di waktu bahagia dan memberkahimu di waktu susah, dan mengumpulkan kalian berdua dalam kebaikan"
-      </p>
-      <div class="ayat-ref" style="margin-top:1rem">[HR. Abu Daud]</div>
-    </div>
+  <div class="orn-row rv" style="margin-top:4rem"><span class="orn-sym">✦</span></div>
+  <div class="rv d1 text-center" style="margin-top:1.2rem">
+    <p class="ayat-latin" style="font-size:clamp(13px,1.6vw,16px);max-width:520px;margin:0 auto">
+      "Semoga Allah memberkahimu di waktu bahagia dan memberkahimu di waktu susah, dan mengumpulkan kalian berdua dalam kebaikan"
+    </p>
+    <div class="ayat-ref" style="margin-top:1rem">[HR. Abu Daud]</div>
   </div>
 </section>
 
@@ -1375,7 +1380,7 @@ section {
   <div class="s-inner" style="padding-top:5rem;padding-bottom:5rem">
     <div class="dc-inner">
       <div class="s-eyebrow rv">Dress Code</div>
-      <div class="s-title rv d1" style="font-size:clamp(32px,5vw,52px)">Panduan Busana</div>
+      <div class="s-title rv d1" style="font-size:clamp(32px,5vw,52px); color: var(--em-dark);">Panduan Busana</div>
       <div class="s-rule rv d2"></div>
       <div class="dc-swatches rv d3">
         <div class="dc-swatch">
@@ -1384,7 +1389,7 @@ section {
         </div>
         <div class="dc-swatch">
           <div class="dc-dot maroon"></div>
-          <div class="dc-swatch-name">Maroon</div>
+          <div class="dc-swatch-name">Dark Maroon</div>
         </div>
         <div class="dc-swatch">
           <div class="dc-dot grey"></div>
@@ -1428,16 +1433,16 @@ section {
   <div class="sec-ornaments" id="rsvp-orns"></div>
   <div class="s-inner">
     <div class="s-eyebrow rv">Konfirmasi Kehadiran</div>
-    <div class="s-title rv d1">RSVP &amp; Ucapan</div>
-    <div class="s-rule rv d2"></div>
+    <div class="s-title rv d1" style="color: var(--em-deep);">RSVP &amp; Ucapan</div>
+    <!-- <div class="s-rule rv d2"></div> -->
     <div class="rsvp-glass rv d3">
       <form id="rsvpForm" onsubmit="submitRSVP(event)">
         <div class="f-group">
-          <label class="f-label">Nama Lengkap</label>
-          <input class="f-input" type="text" id="fname" placeholder="Masukkan nama Anda..." required>
+          <label class="f-label" style="color: var(--em-mid);">Nama Lengkap</label>
+          <input class="f-input" style="color: var(--em-mid);" type="text" id="fname" placeholder="Masukkan nama Anda..." required>
         </div>
         <div class="f-group">
-          <label class="f-label">Kehadiran</label>
+          <label class="f-label" style="color: var(--em-mid);">Kehadiran</label>
           <div class="f-radio-group">
             <div class="f-radio">
               <input type="radio" name="attend" id="r-hadir" value="hadir" checked>
@@ -1450,7 +1455,7 @@ section {
           </div>
         </div>
         <div class="f-group">
-          <label class="f-label">Ucapan &amp; Doa</label>
+          <label class="f-label" style="color: var(--em-mid);">Ucapan &amp; Doa</label>
           <textarea class="f-textarea" id="fwish" placeholder="Tuliskan ucapan dan doa terbaik Anda..."></textarea>
         </div>
         <button type="submit" class="btn-submit"><span>Kirim Ucapan ✦</span></button>
@@ -1460,7 +1465,7 @@ section {
       </form>
     </div>
     <div class="wishes-wall">
-      <div class="w-eyebrow">Ucapan &amp; Doa Tamu</div>
+      <div class="w-eyebrow" style="color: var(--em-mid);">Ucapan &amp; Doa Tamu</div>
       <div id="wishesList"></div>
     </div>
   </div>
